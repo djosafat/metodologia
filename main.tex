@@ -1,0 +1,128 @@
+\documentclass{article} 
+%\documentclass{book}
+%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[left=2.5cm,right=2.5cm,top=2cm,bottom=4cm]{geometry}
+%%%% spanish %%%%%%%%%%
+\usepackage[spanish]{babel}%hyphenation
+%\usepackage[spanish,es-tabla]{babel}%hyphenation
+\usepackage[utf8]{inputenc} % accents
+\usepackage[T1]{fontenc} % encoding
+\usepackage{lmodern} % font
+\usepackage{array} %alineación vertical p (top) m (middle) b (bottom)
+\usepackage{soul} %separación entre letras
+\usepackage{booktabs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Tablas (cuadros) en \LaTeX}
+\author{David Santana}
+\date{DACB UJAT}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+
+\section{Horario de un estudiante}
+
+Un alumno de bachillerato está preocupado por cumplir con sus labores académica. Sus clases, que este semestre serán en aula virtual, comienzan a las 8 a.m. y terminan a las 13 horas. Además, incluyó otras actividades integrales en su formación. Por ejemplo, tuvo en cuenta programar a qué hora hacer ejercicio. El horario que el alumno configuró se puede observar en el Cuadro \ref{tabla-horario-1}.
+
+\begin{table}[h] %h de 'here'
+\centering
+\begin{tabular}{|c||ccccc|}
+\hline
+Horario & Lunes  & Martes & Miércoles & Jueves & Viernes \\ 
+\hline \hline 
+5 a 6   & Correr & Correr & Correr    & Correr & Correr\\
+\hline 
+6 a 7   & Bañarse & Bañarse & Bañarse    & Bañarse & Bañarse\\
+\hline 
+7 a 8   & Desayunar & Desayunar & Desayunar & Desayunar & Desayunar\\
+\hline 
+8 a 9   & Matemáticas & Matemáticas & Matemáticas & Matemáticas y Otros & Matemáticas\\
+\hline 
+9 a 10   & Historia & Historia & Historia & Historia & Historia\\
+\hline 
+10 a 11   & Biología & Biología & Biología & Biología & Biología\\
+\hline 
+11 a 12   & Español & Español & Español & Español & Español\\
+\hline 
+12 a 13   & Laboratorio & Física & Química    & Física & Química\\
+\hline 
+\end{tabular} 
+\caption{Esta tabla muestra el horario relacionado a las actividades de un estudiante de bachillerato.}\label{tabla-horario-1}
+%\vspace{0.5cm}
+\end{table}
+
+Cuando terminó, observó que podía hacer varias mejoras y diseñó un segundo horario, véase Cuadro \ref{tabla-horario-2}.
+\begin{table}[h] %h de 'here'
+\centering
+\begin{tabular}{m{2cm} m{2cm} m{2cm} m{2cm} m{2cm} m{2cm}}
+\hline
+\textbf{Horario} & \textbf{Lunes}  & \textbf{Martes} & \textbf{Miércoles} & \textbf{Jueves} & \textbf{Viernes} \\ 
+\hline  
+5 a 6   & Correr todos los días & Correr & Correr    & Correr & Correr\\
+\hline 
+6 a 7   & Bañarse & Bañarse & Bañarse    & Bañarse & Bañarse\\
+\hline 
+7 a 8   & Desayunar & Desayunar & Desayunar & Desayunar & Desayunar\\
+\hline 
+8 a 9   & Matemáticas & Matemáticas & Matemáticas & Matemáticas & Matemáticas\\
+\hline 
+9 a 10   & Historia & Historia & Historia & Historia & Historia\\
+\hline 
+10 a 11   & Biología & Biología & Biología & Biología & Biología\\
+\hline 
+11 a 12   & Español & Español & Español & Español & Español\\
+\hline 
+12 a 13   & Laboratorio & Física & Química    & Física & Química\\
+\hline 
+\end{tabular} 
+\caption{Esta tabla muestra el horario relacionado a las actividades de un estudiante de bachillerato.}\label{tabla-horario-2}
+%\vspace{0.5cm}
+\end{table}
+Al último pensó que se repetían demasiado los nombres de las actividades todos los días y llegó a la versión final. Véase Cuadro \ref{tabla-horario-3}.
+\begin{table}[h] %h de 'here'
+\centering
+\begin{tabular}{m{2cm}  c >{\centering}m{2cm} c >{\centering}m{2cm} c >{\centering}m{2cm} c >{\centering}m{2cm} c >{\centering}m{2cm} } % solo con \usepackage{array}
+\hline
+\textbf{Horario del semestre} & \textbf{Lunes}  & \textbf{Martes} & \textbf{Miércoles} & \textbf{Jueves} & \textbf{Viernes} \\ 
+\hline  
+5 a 6   & \multicolumn{5}{c}{C\,\quad o\,\quad r\,\quad r\,\quad e\,\quad  r} \\
+\hline 
+6 a 7   & \multicolumn{5}{c}{B\,\qquad a\,\qquad ñ\,\qquad a\,\qquad r\,\qquad s\,\qquad e}\\
+\hline 
+7 a 8   & \multicolumn{5}{c}{Des\,\,\,\,\,\,\,\,\,\,\,\,ayunar}\\
+\hline 
+8 a 9   & \multicolumn{5}{c}{Ma\quad \quad \quad \quad \quad temáticas}\\
+\hline 
+9 a 10   & \multicolumn{5}{c}{ \so{Historia} }\\
+\hline 
+10 a 11   & \multicolumn{5}{c}{Bio\qquad \qquad \qquad \qquad \qquad \qquad logía}\\
+\hline 
+11 a 12   & \multicolumn{5}{c}{ Es\hspace{5cm}pañol }\\
+\hline 
+12 a 13   & Laboratorio & Física & Química    & Física & Química\\
+\hline 
+\end{tabular} 
+\caption{Esta tabla muestra el horario relacionado a las actividades de un estudiante de bachillerato.}\label{tabla-horario-3}
+%\vspace{0.5cm}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{cc}
+        \toprule
+         \multicolumn{2}{c}{Última tabla}\\
+        \midrule
+        ¿Se pueden hacer tablas más elegantes? & Sí \\
+        \midrule
+         ¿Con qué paquete? & booktabs \\
+         \midrule
+         ¿Se pueden hacer filas múltiples? & Sí \\
+         \midrule
+         ¿Con qué paquete? & multirow \\
+        \bottomrule
+    \end{tabular}
+    %\caption{Caption}
+    %\label{loquesea}
+\end{table}
+
+\end{document}
