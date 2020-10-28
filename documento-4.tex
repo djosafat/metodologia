@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[left=2.5cm,right=2.5cm,top=2cm,bottom=4cm]{geometry}
+%%%% spanish %%%%%%%%%%
+\usepackage[spanish,es-tabla]{babel}%hyphenation
+\usepackage[utf8]{inputenc} % accents
+\usepackage[T1]{fontenc} % encoding
+\usepackage{lmodern} % font
+%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{schemata} %Paquete para crear cuadros conceptuales
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Tipos de fuentes}
+\author{David Santana}
+\date{October 2020}
+
+\begin{document}
+
+\maketitle
+
+\section*{¿De dónde parte una investigación?}
+Las fuentes bibliográficas, también llamadas referencias, son los documentos y trabajos consultados que dan fundamento a lo que escribimos o desarrollamos en una investigación. Las fuentes consultadas, por ejemplo libros, artículos científicos, páginas web, por mencionar algunas, deben cumplir con ciertos criterios de formalidad al haber sido sometidos a revisiones por pares. Lo anterior significa que uno o varios especialistas del tema debieron haber hecho un \emph{arbitraje} previo a la publicación del trabajo en cuestión. En el siguiente diagrama se puede ver una clasificación de acuerdo a los objetivos de cada fuente. Tal diagrama es enunciativo, mas no limitativo.
+\vspace{1cm}
+
+\schema{
+    \schemabox{Tipos de fuentes}}{
+        \schemabox{Libros}
+        \schemabox{Artículos científicos}
+        \schemabox{Páginas web}
+}
+
+\vspace{1cm}
+
+\begin{center}
+\begin{minipage}[c]{1\textwidth}
+\schema{
+    \schemabox{Tipos de fuentes}}{
+        \schemabox{Libros}
+        \schemabox{Artículos científicos}
+        \schemabox{Páginas web}
+}
+\end{minipage}
+\end{center}
+
+\vspace{1cm}
+
+\begin{center}
+\begin{minipage}[c]{1\textwidth}
+\schema{\schemabox{Tipos de fuentes}}{
+        	\schemabox{
+        		\schema{\schemabox{$\bullet$ Libros}}{
+        				\schemabox{$\bullet$ Para apoyar un curso}
+        				\schemabox{$\bullet$ De difusión}
+        				\schemabox{$\bullet$ Científico}
+        		}
+    		}
+    		\schemabox{Artículos científicos}
+    		\schemabox{Páginas web}
+}
+\end{minipage}
+\end{center}
+
+\vspace{1cm}
+
+\begin{center}
+\begin{minipage}[c]{1\textwidth}
+\schema{\schemabox{Tipos de fuentes}}{
+        	\schemabox{
+        		\schema{\schemabox{$\bullet$ Libros}}{
+	        				\schemabox{$\bullet$ Para apoyar un curso}
+    		    				\schemabox{$\bullet$ De difusión}
+        					\schemabox{$\bullet$ Científico}
+        		}
+    		}
+    		\schemabox{
+    			\schema{\schemabox{$\bullet$ Artículos científicos}}{
+    						\schemabox{$\bullet$ De difusión}
+    						\schemabox{
+    							\schema{\schemabox{$\bullet$ Con nuevos resultados}}{\schemabox{--Teóricos}\schemabox{--Experimentales}}}
+    		}}
+    		\schemabox{$\bullet$ Páginas web}
+}
+\end{minipage}
+\end{center}
+
+La principal diferencia entre un libro o artículo de difusión y los libros y artículos de investigación original, es que en el segundo caso se expande el conocimiento con resultados nuevos y se generan conclusiones a partir de experimentación. Tanto en libros como en artículos científicos se pueden encontrar trabajos teóricos y experimentales. 
+
+\end{document}
